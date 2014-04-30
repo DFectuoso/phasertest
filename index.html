@@ -32,7 +32,6 @@ function create() {
   ball.body.bounce.setTo(1, 1);
 
   game.input.onDown.add(releaseBall, this);
-
 }
 
 function update () {
@@ -83,6 +82,8 @@ function releaseBall() {
 //    ball.body.velocity.x = ballSpeed;
     ball.body.velocity.y = -ballSpeed;
     ballReleased = true;
+  } else {
+    ball.body.velocity.y += Math.random() * 100;
   }
 }
 
